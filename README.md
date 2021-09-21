@@ -14,6 +14,7 @@ bikeshare_2_DYN.py
 chicago.csv
 new_york_city.csv
 washington.csv
+readme.md
 
 ### Credits
 Thank you to the users of StackOverflow. Y'all are the community!
