@@ -1,17 +1,21 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
 ### Date created
-Include the date you created this project and README file.
+September 20, 2021
 
 ### Project Title
-Replace the Project Title
+bikeshare-git-DYN
 
 ### Description
-Describe what your project is about and what it does
+This project duplicated the previous bikeshare Python project and modifies it to show skill and growth in using Git.
 
 ### Files used
-Include the files used
+bikeshare_2_DYN.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Thank you to the users of StackOverflow. Y'all are the community!
+Credit to my teachers and assistants at University of Central Florida Bootcamp.
 
