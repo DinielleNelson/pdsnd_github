@@ -14,9 +14,12 @@ bikeshare_2_DYN.py
 chicago.csv
 new_york_city.csv
 washington.csv
-readme.md
 
 ### Credits
 Thank you to the users of StackOverflow. Y'all are the community!
 Credit to my teachers and assistants at University of Central Florida Bootcamp.
+Referenced projects: 
+    Aritra96's bikeshare-project GitHub (https://github.com/Aritra96/bikeshare-project)
+    ozlerhakan's bikeshare GitHub (https://github.com/ozlerhakan/bikeshare)
+
 
