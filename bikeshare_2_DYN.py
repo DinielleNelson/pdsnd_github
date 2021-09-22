@@ -96,15 +96,15 @@ def time_stats(df):
     print(f"The most common day of the week to travel is on {dow_mode}" )
 
     # display the most common start hour
-    start_hour_mode = df['Start Time'].dt.hour.mode()[0]
-    if start_hour_mode == 12:
-        start_hour_mode_12 = str(start_hour_mode) + " PM" # accommodates for noon
-    elif start_hour_mode > 12: 
-        start_hour_mode_12 = str(start_hour_mode - 12) + " PM" # accommodates for evening hours, so military time isn't given
+    start_hr_mode = df['Start Time'].dt.hour.mode()[0]
+    if start_hr_mode == 12:
+        start_hr_mode_12 = str(start_hr_mode) + " PM" # accommodates for noon
+    elif start_hr_mode > 12: 
+        start_hr_mode_12 = str(start_hr_mode - 12) + " PM" # accommodates for evening hours, so military time isn't given
     else: 
-        start_hour_mode_12 = str(start_hour_mode) + " AM"
+        start_hr_mode_12 = str(start_hr_mode) + " AM"
 # *** TO DO: Change hour to AM/PM format  
-    print(f"The most common hour of the day to start a rental is {start_hour_mode_12}" )
+    print(f"The most common hour of the day to start a rental is {start_hr_mode_12}" )
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
