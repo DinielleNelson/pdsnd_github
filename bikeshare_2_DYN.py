@@ -218,11 +218,15 @@ def main():
 
         raw_data_input = input("Would you like to see a sample of raw data?").lower()    
         #### will catch if the entry is not yes or no
-        while (raw_data_input != 'yes') and (raw_data_input != 'no') and (raw_data_input != 'y') and (raw_data_input != 'n'):
+        while (raw_data_input != 'yes') and (raw_data_input != 'no') and (raw_data_input != 'y') and (raw_data_input != 'n') and (raw_data_input != 'raw'):
             raw_data_input = input("I'm sorry, your response was not understood. Please enter yes or no").lower()
 
         if raw_data_input == 'yes' or raw_data_input == 'y':
             see_data(df)
+
+        ### easter egg
+        if raw_data_input == 'raw':
+            raw_data_input = input("Ooh baby I like it raw. \nYeah baby, I like it raaaw. \nNo seriously. Would you like to see a sample of raw data? Please enter yes or no.").lower()
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
