@@ -96,15 +96,15 @@ def time_stats(df):
     print(f"The most common day of the week to travel is on {dow_mode}" )
 
     # display the most common start hour
-    start_hour_mode = df['Start Time'].dt.hour.mode()[0]
-    if start_hour_mode == 12:
-        start_hour_mode_12 = str(start_hour_mode) + " PM" # accommodates for noon
-    elif start_hour_mode > 12: 
-        start_hour_mode_12 = str(start_hour_mode - 12) + " PM" # accommodates for evening hours, so military time isn't given
+    start_hr_mode = df['Start Time'].dt.hour.mode()[0]
+    if start_hr_mode == 12:
+        start_hr_mode_12 = str(start_hr_mode) + " PM" # accommodates for noon
+    elif start_hr_mode > 12: 
+        start_hr_mode_12 = str(start_hr_mode - 12) + " PM" # accommodates for evening hours, so military time isn't given
     else: 
-        start_hour_mode_12 = str(start_hour_mode) + " AM"
+        start_hr_mode_12 = str(start_hr_mode) + " AM"
 # *** TO DO: Change hour to AM/PM format  
-    print(f"The most common hour of the day to start a rental is {start_hour_mode_12}" )
+    print(f"The most common hour of the day to start a rental is {start_hr_mode_12}" )
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -216,13 +216,17 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-        rawdata_input = input("Would you like to see a sample of raw data?").lower()    
+        raw_data_input = input("Would you like to see a sample of raw data?").lower()    
         #### will catch if the entry is not yes or no
-        while (rawdata_input != 'yes') and (rawdata_input != 'no') and (rawdata_input != 'y') and (rawdata_input != 'n'):
-            rawdata_input = input("I'm sorry, your response was not understood. Please enter yes or no").lower()
+        while (raw_data_input != 'yes') and (raw_data_input != 'no') and (raw_data_input != 'y') and (raw_data_input != 'n') and (raw_data_input != 'raw'):
+            raw_data_input = input("I'm sorry, your response was not understood. Please enter yes or no").lower()
 
-        if rawdata_input == 'yes' or rawdata_input == 'y':
+        if raw_data_input == 'yes' or raw_data_input == 'y':
             see_data(df)
+
+        ### easter egg
+        if raw_data_input == 'raw':
+            raw_data_input = input("Ooh baby I like it raw. \nYeah baby, I like it raaaw. \nNo seriously. Would you like to see a sample of raw data? Please enter yes or no.").lower()
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
