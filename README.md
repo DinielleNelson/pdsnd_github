@@ -10,7 +10,6 @@ bikeshare-git-DYN
 This project duplicated the previous bikeshare Python project and modifies it to show skill and growth in using Git.
 
 ### Files used
-README.md
 bikeshare_2_DYN.py
 chicago.csv
 new_york_city.csv
