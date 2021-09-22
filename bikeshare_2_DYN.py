@@ -216,12 +216,12 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
 
-        rawdata_input = input("Would you like to see a sample of raw data?").lower()    
+        raw_data_input = input("Would you like to see a sample of raw data?").lower()    
         #### will catch if the entry is not yes or no
-        while (rawdata_input != 'yes') and (rawdata_input != 'no') and (rawdata_input != 'y') and (rawdata_input != 'n'):
-            rawdata_input = input("I'm sorry, your response was not understood. Please enter yes or no").lower()
+        while (raw_data_input != 'yes') and (raw_data_input != 'no') and (raw_data_input != 'y') and (raw_data_input != 'n'):
+            raw_data_input = input("I'm sorry, your response was not understood. Please enter yes or no").lower()
 
-        if rawdata_input == 'yes' or rawdata_input == 'y':
+        if raw_data_input == 'yes' or raw_data_input == 'y':
             see_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
